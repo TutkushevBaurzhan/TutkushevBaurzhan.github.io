@@ -1,1 +1,1 @@
-# projectSnake.github.io
+# TutkushevBaurzhan.github.io
