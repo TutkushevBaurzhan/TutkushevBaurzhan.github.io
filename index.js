@@ -18,7 +18,7 @@ let
     
     appleSize = cellSize,
     appleCords = {x: cellSize*8, y: cellSize},
-    interval = 130,
+    interval = 150,
     score = 0, 
     inputForScore = document.getElementById('score'),
     
@@ -110,26 +110,28 @@ function keypressHandler(e) {
         if(pressTimes === 0) {
             setInterval(gameProcess, interval);
             status = 'start';
+            pressTimes++;
         }
 
         dx = cellSize;
         dy = 0;
 
         setTimeout(() => {lastDirection = 'right'}, interval);
-        pressTimes++;
+        
     }
     // DOWN
     if((e.keyCode === 115 || e.keyCode === 1099) && lastDirection !== 'up') {
         if(pressTimes === 0) {
             setInterval(gameProcess, interval);
             status = 'start';
+            pressTimes++;
         }
 
         dx = 0;
         dy = cellSize;
 
         setTimeout(() => {lastDirection = 'down'}, interval);
-        pressTimes++;
+        
     }
     // LEFT
     if((e.keyCode === 97 || e.keyCode === 1092) && lastDirection !== 'right') {
@@ -138,20 +140,21 @@ function keypressHandler(e) {
         dy = 0;
 
         setTimeout(() => {lastDirection = 'left'}, interval);
-        pressTimes++;
+        // pressTimes++;
     }
     // UP
     if((e.keyCode === 119 || e.keyCode === 1094) && lastDirection !== 'down') {
         if(pressTimes === 0) {
             setInterval(gameProcess, interval);
             status = 'start';
+            pressTimes++;
         }
 
         dx = 0;
         dy = -cellSize;
 
         setTimeout(() => {lastDirection = 'up'}, interval);
-        pressTimes++;
+        
     }
 };
 
