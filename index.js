@@ -40,7 +40,7 @@ canv.height = window.innerHeight;
 mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 document.addEventListener('keypress', keypressHandler);
 
-// SWIPE вниз
+// SWIPE DOWN
 function swipedownHandler() {
 
     if(lastDirection !== 'up') {
